@@ -585,6 +585,7 @@ def make_masked_msa(
     mask_position &= protein["msa_mask"].bool()
 
     if "bert_mask" in protein:
+        print(f"{protein['bert_mask']}")
         mask_position &= protein["bert_mask"].bool()
 
     if share_mask:
